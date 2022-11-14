@@ -1,0 +1,53 @@
+.navbar{
+    padding: 30px 0;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            gap: 25px;
+            li{
+                display: flex;
+                align-items: center;
+                a{
+                    color: $Dark-grayish-blue;
+                    &:hover{
+                        color: $Soft-red;
+                    }
+                }
+            }
+        }
+        .hamburger{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navbar{
+        position: relative;
+        .wrapper{
+            .hamburger{
+                display: flex;
+                align-items: center;
+                z-index: 56;
+                .close{
+                    display: none;
+                }
+            }
+            .list_container{
+                position: fixed;
+                top: 0;
+                right: 0;
+                flex-direction: column;
+                background:#fff;
+                z-index: 55;
+                width: 240px;
+                min-height: 100vh;
+                padding: 50px 20px;
+                right: -240px;
+                transition: .5s ease;
+            }
+        }
+    }
+}
